@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-polEiWo8+Rp9Jz0Ghi/sDfq8AbyOV9UKorYuZfjNaIM='; style-src 'self' 'unsafe-inline'; img-src 'self'; media-src 'self'; font-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-n1iPi+3LYUlc4mMnVdYXc0SG0bEid1G2kpL8ajoPpbQ='; style-src 'self' 'unsafe-inline'; img-src 'self'; media-src 'self'; font-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ZMaskFX Early Access – Real-time face effects for OBS Studio</title>
@@ -122,7 +122,7 @@
       <h3>ZMaskFX Free</h3><div class="amt">$0</div>
       <ul>
         <li data-i18n="f1">Effects that follow your face in real time</li>
-        <li data-i18n="f2">3 ready-made presets + 2 of your own</li>
+        <li data-i18n="f2">3 ready-made presets + 3 of your own</li>
         <li data-i18n="f3">Game spell sync (free World of Warcraft addon)</li>
         <li data-i18n="f5">More games coming soon</li>
         <li class="no" data-i18n="f4">Small ZMaskFX watermark</li>
@@ -139,12 +139,12 @@
         <li data-i18n="p3">Unlimited custom presets</li>
         <li data-i18n="p4">No watermark</li>
         <li data-i18n="p6">Effects Pack 1 included: new effects and ready-made presets</li>
-        <li data-i18n="p5">Lifetime license, 1 PC (move it any time)</li>
+        <li data-i18n="p5">Lifetime license, 1 PC at a time (switch PC from the app)</li>
       </ul>
       <a class="btn pri" id="buy" href="#" data-i18n="cta_buy2">Buy ZMaskFX Pro</a>
     </div>
   </div>
-  <p class="tax mono" data-i18n="tax">Lemon Squeezy handles payment and invoicing. Taxes are included in the price.</p>
+  <p class="tax mono" data-i18n="tax">Gumroad handles payment and invoicing. Taxes (such as VAT) are added at checkout depending on your country.</p>
 </div></section>
 
 <section id="faq"><div class="wrap">
@@ -155,10 +155,12 @@
   <div class="faq" data-rv>
     <details><summary data-i18n="q1">Does it work with NVIDIA Broadcast and other virtual cameras?</summary><p data-i18n="a1">Yes. ZMaskFX reads the picture from the OBS source, so any source OBS can show works, including NVIDIA Broadcast.</p></details>
     <details><summary data-i18n="q2">What do I need?</summary><p data-i18n="a2">Windows 10/11 and OBS Studio 28 or newer with obs-websocket enabled (included in OBS). A regular gaming PC is plenty.</p></details>
-    <details><summary data-i18n="q3">Can I use my license on two PCs?</summary><p data-i18n="a3">One license works on one PC at a time. Use "Deactivate on this PC" in the app to move it to another computer whenever you want.</p></details>
+    <details><summary data-i18n="q3">Can I use my license on two PCs?</summary><p data-i18n="a3">One license works on one PC at a time. To switch, just activate your key on the new PC: the license moves there by itself and the old PC goes back to Free. Reinstalling on the same PC never counts.</p></details>
     <details><summary data-i18n="q4">Is the WoW addon safe?</summary><p data-i18n="a4">It is free, open source and only displays information about your own spells. It does not automate anything or read other players. ZMaskFX is not affiliated with or endorsed by Blizzard Entertainment.</p></details>
+    <details><summary data-i18n="q7">Windows says “Windows protected your PC”. Is it safe?</summary><p data-i18n="a7">Yes. Windows shows that notice for programs from small independent studios that are not downloaded by millions yet: it means “unknown publisher”, not that a threat was found. Click “More info” and then “Run anyway”. The installer does not ask for administrator rights and only installs into its own folder; uninstalling removes it completely.</p></details>
+    <details><summary data-i18n="q8">How can I check what ZMaskFX sends?</summary><p data-i18n="a8">You do not have to take our word for it. With ZMaskFX running, open Windows Resource Monitor (Network tab) or any firewall: you will only see our licence and effect pack server (Cloudflare) and updates (GitHub). Your video never leaves your PC. If your antivirus has doubts, you can also scan the installer on VirusTotal. Details in the <a href="privacy.html">privacy policy</a>.</p></details>
     <details><summary data-i18n="q6">What does Early Access mean?</summary><p data-i18n="a6">ZMaskFX is already working and in use, and we keep adding effects, games and fixes. Early Access buyers get the lowest price and every update. If something does not work on your setup, write to us and we will fix it or refund you.</p></details>
-    <details><summary data-i18n="q5">Refunds?</summary><p data-i18n="a5">If ZMaskFX does not work on your setup, email us at <a href="mailto:support@insignialabs.app">support@insignialabs.app</a> within 14 days of purchase for a refund. See the <a href="terms.html">terms</a>.</p></details>
+    <details><summary data-i18n="q5">Refunds?</summary><p data-i18n="a5">If ZMaskFX does not work on your setup, email us at <a href="mailto:support@insignialabs.app">support@insignialabs.app</a> within 30 days of purchase for a refund. See the <a href="terms.html">terms</a>.</p></details>
   </div>
 </div></section>
 
@@ -180,8 +182,8 @@
 
 <script>
 document.documentElement.classList.add('js');
-// Enlace de compra: pon aquí la URL de checkout de Lemon Squeezy cuando exista.
-const CHECKOUT_URL = '';
+// Enlace de compra: pon aquí la URL de checkout de Gumroad cuando exista.
+const CHECKOUT_URL = 'https://insignialabs.gumroad.com/l/ZMaskFXPro';
 const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // Sin tienda abierta el botón dice "Muy pronto" (antes de leer los textos en inglés del HTML).
@@ -217,15 +219,17 @@ const I18N = {
   l3h:'Privado por diseño', l3p:'Tu vídeo nunca sale de tu PC. ZMaskFX solo se conecta para comprobar tu licencia, buscar actualizaciones y descargar packs de efectos. Nunca vendemos tus datos.',
   lbl_games:'Juegos', wow_h:'Dispara efectos desde tu juego', wow_sub:'Lanza un hechizo en World of Warcraft y tu cara reacciona. Gratis: 3 efectos básicos por hechizo o tus propios presets. Pro: todos.',
   lbl_price:'Precio', pr_h:'Precio simple', pr_sub:'Pruébalo gratis. Paga una vez y es tuyo para siempre. Precio de acceso anticipado: puede subir tras el lanzamiento, pero tu licencia seguirá válida de por vida.', once:'pago único',
-  f1:'Efectos que siguen tu cara en tiempo real', f2:'3 presets listos + 2 propios', f3:'Sincronización con hechizos (addon gratuito de World of Warcraft)', f5:'Más juegos próximamente', f4:'Pequeña marca de agua ZMaskFX', cta_free:'Versión gratuita disponible en el lanzamiento',
-  p1:'Todo lo de Free', p2:'Todos los presets y efectos actuales', p3:'Presets propios ilimitados', p4:'Sin marca de agua', p5:'Licencia de por vida, 1 PC (puedes moverla cuando quieras)', p6:'Pack 1 de efectos incluido: efectos nuevos y presets listos', cta_buy2:'Comprar ZMaskFX Pro', cta_soon:'Muy pronto',
-  tax:'Lemon Squeezy gestiona el pago y la factura. Los impuestos están incluidos en el precio.',
+  f1:'Efectos que siguen tu cara en tiempo real', f2:'3 presets listos + 3 propios', f3:'Sincronización con hechizos (addon gratuito de World of Warcraft)', f5:'Más juegos próximamente', f4:'Pequeña marca de agua ZMaskFX', cta_free:'Versión gratuita disponible en el lanzamiento',
+  p1:'Todo lo de Free', p2:'Todos los presets y efectos actuales', p3:'Presets propios ilimitados', p4:'Sin marca de agua', p5:'Licencia de por vida, 1 PC a la vez (cambia de PC desde la app)', p6:'Pack 1 de efectos incluido: efectos nuevos y presets listos', cta_buy2:'Comprar ZMaskFX Pro', cta_soon:'Muy pronto',
+  tax:'Gumroad gestiona el pago y la factura. Los impuestos (como el IVA) se suman al pagar según tu país.',
   lbl_faq:'Preguntas frecuentes', faq_h:'Preguntas', q1:'¿Funciona con NVIDIA Broadcast y otras cámaras virtuales?', a1:'Sí. ZMaskFX lee la imagen de la fuente de OBS, así que sirve cualquier fuente que OBS pueda mostrar, incluida NVIDIA Broadcast.',
   q2:'¿Qué necesito?', a2:'Windows 10/11 y OBS Studio 28 o superior con obs-websocket activado (viene incluido). Un PC de juego normal es suficiente.',
-  q3:'¿Puedo usar mi licencia en dos PC?', a3:'Una licencia funciona en un PC a la vez. Usa "Desactivar en este PC" en la app para pasarla a otro ordenador cuando quieras.',
+  q3:'¿Puedo usar mi licencia en dos PC?', a3:'Una licencia funciona en un PC a la vez. Para cambiar, activa tu clave en el PC nuevo: la licencia se mueve sola y el antiguo vuelve a Free. Reinstalar en el mismo PC nunca cuenta.',
   q4:'¿Es seguro el addon de WoW?', a4:'Es gratuito, de código abierto y solo muestra información de tus propios hechizos. No automatiza nada ni lee a otros jugadores. ZMaskFX no está afiliado a Blizzard Entertainment ni cuenta con su respaldo.',
+  q7:'Windows dice «Windows protegió su PC». ¿Es seguro?', a7:'Sí. Windows muestra ese aviso con los programas de estudios pequeños e independientes que aún no descargan millones de personas: significa «editor desconocido», no que haya encontrado una amenaza. Pulsa «Más información» y luego «Ejecutar de todas formas». El instalador no pide permisos de administrador y solo se instala en su propia carpeta; al desinstalarlo se borra por completo.',
+  q8:'¿Cómo compruebo lo que envía ZMaskFX?', a8:'No tienes que fiarte de nuestra palabra. Con ZMaskFX abierto, abre el Monitor de recursos de Windows (pestaña Red) o cualquier firewall: solo verás nuestro servidor de licencias y packs de efectos (en Cloudflare) y las actualizaciones (GitHub). Tu vídeo nunca sale de tu PC. Si tu antivirus duda, también puedes analizar el instalador en VirusTotal. Más detalles en la <a href="privacy.html">política de privacidad</a>.',
   q6:'¿Qué significa Early Access?', a6:'ZMaskFX ya funciona y se usa, y seguimos añadiendo efectos, juegos y arreglos. Quien compra en acceso anticipado paga el precio más bajo y recibe todas las actualizaciones. Si algo no funciona en tu equipo, escríbenos y lo arreglamos o te devolvemos el dinero.',
-  q5:'¿Reembolsos?', a5:'Si ZMaskFX no funciona en tu equipo, escríbenos a <a href="mailto:support@insignialabs.app">support@insignialabs.app</a> en los 14 días posteriores a la compra para pedir el reembolso. Consulta las <a href="terms.html">condiciones</a>.',
+  q5:'¿Reembolsos?', a5:'Si ZMaskFX no funciona en tu equipo, escríbenos a <a href="mailto:support@insignialabs.app">support@insignialabs.app</a> en los 30 días posteriores a la compra para pedir el reembolso. Consulta las <a href="terms.html">condiciones</a>.',
   final_h:'Ilumina tu próximo directo.',
   ft_terms:'Términos y reembolsos', ft_priv:'Privacidad',
   fx_dk:'Exánime', fx_fire:'Fuego infernal', fx_hearts:'Corazones', fx_anime:'Anime estrellas', fx_censor:'CENSORED', fx_zip:'Cremallera',

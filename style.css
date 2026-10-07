@@ -11,7 +11,7 @@
   --peach:#ffb39c;--peach-2:#ff8a73;
   --tx:#e9eef7;--mut:#8b97aa;--dim:#5b6679;
   --line:rgba(190,212,255,.11);--line-2:rgba(190,212,255,.2);--glass:rgba(14,24,40,.55);--glass-2:rgba(255,255,255,.035);
-  --ok:#9fe6c4;--black:#000;--white:#fff;
+  --ok:#9fe6c4;--warn:#f5c46b;--bad:#ff7d8c;--pro-1:#ffe08a;--pro-2:#f0b43c;--pro-3:#d18a1f;--pro-ink:#2b1a00;--black:#000;--white:#fff;
   /* Tipo */
   --f-sans:"Geist",system-ui,-apple-system,"Segoe UI",sans-serif;
   --f-mono:"Geist Mono",ui-monospace,"Cascadia Mono",Consolas,monospace;
