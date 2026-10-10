@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-n1iPi+3LYUlc4mMnVdYXc0SG0bEid1G2kpL8ajoPpbQ='; style-src 'self' 'unsafe-inline'; img-src 'self'; media-src 'self'; font-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-UVJTgR+pRc6A35KRbAucjgEyKd6MLiGAGtuQo5gfNOs='; style-src 'self' 'unsafe-inline'; img-src 'self'; media-src 'self'; font-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ZMaskFX Early Access – Real-time face effects for OBS Studio</title>
-<meta name="description" content="ZMaskFX adds real-time face effects to OBS Studio: fire eyes, hearts, anonymous face, pixelate, CENSORED bar and more. Lightweight, works with any camera source.">
+<meta name="description" content="ZMaskFX adds real-time face effects to OBS Studio: fire eyes, hearts, Anonymous, Pixelated, Censored and more. Lightweight, works with any camera source.">
 <meta name="theme-color" content="#03060b">
-<link rel="icon" href="favicon.svg?v=2" type="image/svg+xml"><link rel="icon" href="favicon.ico?v=2" sizes="any">
+<link rel="icon" href="favicon.svg?v=3" type="image/svg+xml"><link rel="icon" href="favicon.ico?v=3" sizes="any">
 <link rel="preload" href="fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=19">
 </head>
 <body>
 <div class="atmos" aria-hidden="true"></div>
@@ -36,7 +36,7 @@
     <a class="btn pri" href="#pricing"><span data-i18n="cta_buy">See pricing and launch</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     <a class="btn sec" href="#stage" data-i18n="cta_see">See the effects</a>
   </div>
-  <p class="req mono" data-rv style="--d:.32s" data-i18n="note_win">Windows 10/11 + OBS Studio 28 or newer. Free version available at launch.</p>
+  <p class="req mono" data-rv style="--d:.32s" data-i18n="note_win">Windows 10/11 + OBS Studio 28 or newer. Free version available now.</p>
 
   <div class="stage" id="stage" data-rv style="--d:.4s" tabindex="-1" aria-label="ZMaskFX demo">
     <div class="core" aria-hidden="true"></div>
@@ -54,14 +54,14 @@
     <button class="fx-arrow prev" type="button" id="fx-prev" data-i18n-label="fx_prev" aria-label="Previous effect"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
     <button class="fx-arrow next" type="button" id="fx-next" data-i18n-label="fx_next" aria-label="Next effect"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
     <div class="chips" id="chips" role="tablist" aria-label="Effects">
-      <button type="button" class="pill" role="tab" data-fx="Exánime" data-i18n="fx_dk">Exánime</button>
+      <button type="button" class="pill" role="tab" data-fx="Exánime" data-i18n="fx_dk">Lich</button>
       <button type="button" class="pill" role="tab" data-fx="Fuego infernal" data-i18n="fx_fire">Hellfire</button>
       <button type="button" class="pill" role="tab" data-fx="Corazones" data-i18n="fx_hearts">Hearts</button>
-      <button type="button" class="pill" role="tab" data-fx="Anime estrellas" data-i18n="fx_anime">Anime stars</button>
-      <button type="button" class="pill" role="tab" data-fx="Censura" data-i18n="fx_censor">CENSORED</button>
-      <button type="button" class="pill" role="tab" data-fx="Silencio" data-i18n="fx_zip">Zipper</button>
+      <button type="button" class="pill" role="tab" data-fx="Anime estrellas" data-i18n="fx_anime">Stars</button>
+      <button type="button" class="pill" role="tab" data-fx="Censura" data-i18n="fx_censor">Censorship</button>
+      <button type="button" class="pill" role="tab" data-fx="Silencio" data-i18n="fx_zip">Silence</button>
       <button type="button" class="pill" role="tab" data-fx="Anonimo" data-i18n="fx_anon">Anonymous</button>
-      <button type="button" class="pill" role="tab" data-fx="Pixelado" data-i18n="fx_pixel">Pixelate</button>
+      <button type="button" class="pill" role="tab" data-fx="Pixelado" data-i18n="fx_pixel">Pixelated</button>
     </div>
   </div>
 </div></section>
@@ -69,16 +69,34 @@
 <section id="effects"><div class="wrap">
   <div class="head" data-rv>
     <span class="label mono" data-i18n="lbl_effects">Effects</span>
-    <h2 data-i18n="eff_h">Effects that react to you</h2>
-    <p data-i18n="eff_sub">Particles and masks follow your eyes, mouth and head. Edit your presets to make them yours (full editor in Pro).</p>
+    <h2 data-i18n="eff_h">Every effect, made to measure.</h2>
+    <p data-i18n="eff_sub">Edit the ones included or create your own.</p>
   </div>
-  <div class="bento">
-    <article class="glass fx wide warm" data-rv><span class="arc" aria-hidden="true"></span><span class="glyph"><svg viewBox="0 0 24 24"><path d="M12 3c1 3.5 5 5 5 9.5a5 5 0 0 1-10 0C7 10 9 8.5 9 6c2 .5 3 2 3 4"/></svg></span><span class="k mono" data-i18n="k_eyes">Eyes · mouth</span><h3 data-i18n="e1h">Fire, smoke and sparks</h3><p data-i18n="e1p">Flames from your eyes, dragon breath when you open your mouth, embers and glow.</p></article>
-    <article class="glass fx wide" data-rv style="--d:.08s"><span class="arc" aria-hidden="true"></span><span class="glyph"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M8 12h8"/></svg></span><span class="k mono" data-i18n="k_face">Whole face</span><h3 data-i18n="e4h">Anonymous, pixelate, blur</h3><p data-i18n="e4p">Hide your face in one key press: solid mask, pixelation or blur that follows the outline of your face.</p></article>
-    <article class="glass fx warm" data-rv><span class="glyph"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></span><h3 data-i18n="e2h">Hearts and anime stars</h3><p data-i18n="e2p">Floating hearts, sparkling stars, tears when you blink and confetti on a hotkey.</p></article>
-    <article class="glass fx" data-rv style="--d:.06s"><span class="glyph"><svg viewBox="0 0 24 24"><path d="M4 8h16v8H4zM8 12h8"/></svg></span><h3 data-i18n="e3h">CENSORED bar</h3><p data-i18n="e3p">A bar over your eyes or mouth with your own text, font, color and angle. It tilts with your head.</p></article>
-    <article class="glass fx" data-rv style="--d:.12s"><span class="glyph"><svg viewBox="0 0 24 24"><path d="M5 12h14M9 9v6M12 9v6M15 9v6"/></svg></span><h3 data-i18n="e5h">Zipper mouth</h3><p data-i18n="e5p">Zip your mouth shut with an animated zipper. Perfect for secrets and spoilers.</p></article>
-    <article class="glass fx full" data-rv><span class="glyph"><svg viewBox="0 0 24 24"><path d="M4 7l8-4 8 4v10l-8 4-8-4zM4 7l8 4 8-4M12 11v10"/></svg></span><span class="k mono" data-i18n="k_pro">Full editor in Pro</span><h3 data-i18n="e6h">Full editor</h3><p data-i18n="e6p">Edit colors, speed, shape, trigger (always, key, blink, open mouth) and save your own presets.</p></article>
+  <div class="stack">
+    <div class="glass game" data-rv>
+      <div class="txt"><div class="head">
+        <span class="label mono" data-i18n="lbl_place">Placement</span>
+        <h3 data-i18n="e1h">Place it anywhere.</h3>
+        <p data-i18n="e1p">On you, around you or behind your silhouette (Pro).</p>
+      </div></div>
+      <div class="vis" aria-hidden="true"><span class="glyph"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/></svg></span></div>
+    </div>
+    <div class="glass game rev" data-rv style="--d:0.08s">
+      <div class="txt"><div class="head">
+        <span class="label mono" data-i18n="lbl_react">Reaction</span>
+        <h3 data-i18n="e2h">It reacts to you.</h3>
+        <p data-i18n="e2p">Triggered by your expression or a key.</p>
+      </div></div>
+      <div class="vis" aria-hidden="true"><span class="glyph"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h3l2.5-6 4 12 2.5-6H21"/></svg></span></div>
+    </div>
+    <div class="glass game" data-rv style="--d:0.16s">
+      <div class="txt"><div class="head">
+        <span class="label mono" data-i18n="lbl_games">Games</span>
+        <h3 data-i18n="wow_h">Trigger effects from your game</h3>
+        <p data-i18n="wow_sub">Cast a spell in World of Warcraft and your face reacts. Free: 3 basic effects per spell, or your own presets. Pro: all of them.</p>
+      </div></div>
+      <div class="vis" aria-hidden="true"><svg class="flow" viewBox="0 0 400 200"><image href="img/wow-logo.svg" x="22" y="54" width="92" height="92"/><path class="arrow" d="M140 86H258M248 78l10 8-10 8"/><path class="arrow" d="M140 114H258M248 106l10 8-10 8"/><circle class="pk" cx="140" cy="86" r="3"/><circle class="pk p2" cx="140" cy="114" r="3"/><image href="img/obs-studio.svg" x="286" y="54" width="92" height="92"/></svg></div>
+    </div>
   </div>
 </div></section>
 
@@ -100,17 +118,6 @@
   </div>
 </div></section>
 
-<section id="wow"><div class="wrap">
-  <div class="glass game" data-rv>
-    <div class="txt"><div class="head">
-      <span class="label mono" data-i18n="lbl_games">Games</span>
-      <h2 data-i18n="wow_h">Trigger effects from your game</h2>
-      <p data-i18n="wow_sub">Cast a spell in World of Warcraft and your face reacts. Free: 3 basic effects per spell, or your own presets. Pro: all of them.</p>
-    </div></div>
-    <div class="vis" aria-hidden="true"><span class="orbit o1"></span><span class="orbit o2"></span><span class="spark"></span></div>
-  </div>
-</div></section>
-
 <section id="pricing"><div class="wrap">
   <div class="head c" data-rv>
     <span class="label mono" data-i18n="lbl_price">Pricing</span>
@@ -127,7 +134,7 @@
         <li data-i18n="f5">More games coming soon</li>
         <li class="no" data-i18n="f4">Small ZMaskFX watermark</li>
       </ul>
-      <span class="btn sec" aria-disabled="true" data-i18n="cta_free">Free version available at launch</span>
+      <a class="btn sec" id="get-free" href="https://insignialabs.gumroad.com/l/ZMaskFXFree" data-i18n="cta_free">Download ZMaskFX Free</a>
     </div>
     <div class="glass plan pro" data-rv style="--d:.1s">
       <span class="halo" aria-hidden="true"></span><span class="crown" aria-hidden="true"></span>
@@ -166,7 +173,6 @@
 
 <section class="final"><div class="wrap">
   <h2 data-rv><span class="grad" data-i18n="final_h">Light up your next stream.</span></h2>
-  <div class="cta" data-rv style="--d:.1s"><a class="btn pri" href="#pricing"><span data-i18n="cta_buy">See pricing and launch</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
   <div class="ring-solo" aria-hidden="true"></div>
 </div></section>
 </main>
@@ -182,7 +188,7 @@
 
 <script>
 document.documentElement.classList.add('js');
-// Enlace de compra: pon aquí la URL de checkout de Gumroad cuando exista.
+// Enlace de compra de Pro (Gumroad). El de Free va directo en el HTML (#get-free).
 const CHECKOUT_URL = 'https://insignialabs.gumroad.com/l/ZMaskFXPro';
 const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -201,16 +207,12 @@ const I18N = {
   nav_effects:'Efectos', nav_how:'Cómo funciona', nav_pricing:'Precio',
   h1a:'Efectos faciales para tu stream.', h1b:'En directo, ligeros y tuyos.',
   lead:'ZMaskFX sigue tu cara dentro de OBS Studio y dibuja efectos increíbles sobre cualquier fuente de cámara y en tiempo real.',
-  cta_buy:'Ver precio y lanzamiento', cta_see:'Ver los efectos', note_win:'Windows 10/11 + OBS Studio 28 o superior. Versión gratuita disponible en el lanzamiento.',
+  cta_buy:'Ver precio y lanzamiento', cta_see:'Ver los efectos', note_win:'Windows 10/11 + OBS Studio 28 o superior. Versión gratuita disponible ahora.',
   hud_engine:'Motor de efectos', hud_replay:'Repetir', hud_pause:'Pausa', hud_play:'Seguir', fx_prev:'Efecto anterior', fx_next:'Efecto siguiente',
-  lbl_effects:'Efectos', eff_h:'Efectos que reaccionan a ti', eff_sub:'Partículas y máscaras siguen tus ojos, boca y cabeza. Edita tus presets y hazlos tuyos (editor completo en Pro).',
-  k_eyes:'Ojos · boca', k_face:'Cara entera', k_pro:'Editor completo en Pro',
-  e1h:'Fuego, humo y chispas', e1p:'Llamas en los ojos, aliento de dragón al abrir la boca, brasas y resplandor.',
-  e2h:'Corazones y estrellas anime', e2p:'Corazones flotantes, estrellas brillantes, lágrimas al parpadear y confeti con una tecla.',
-  e3h:'Barra CENSORED', e3p:'Una barra sobre los ojos o la boca con tu texto, fuente, color y ángulo. Se inclina con tu cabeza.',
-  e4h:'Anónimo, pixelado y desenfoque', e4p:'Oculta tu cara con una tecla: máscara sólida, pixelado o desenfoque que sigue el contorno de tu cara.',
-  e5h:'Cremallera en la boca', e5p:'Cierra la boca con una cremallera animada. Ideal para secretos y spoilers.',
-  e6h:'Editor completo', e6p:'Edita colores, velocidad, forma, disparador (siempre, tecla, parpadeo, boca abierta) y guarda tus presets.',
+  lbl_effects:'Efectos', eff_h:'Cada efecto, a tu medida.', eff_sub:'Edita los que vienen incluidos o crea los tuyos.',
+  lbl_place:'Posición', lbl_react:'Reacción',
+  e1h:'Colócalo donde quieras.', e1p:'Sobre ti, a tu alrededor o detrás de tu silueta (Pro).',
+  e2h:'Reacciona a ti.', e2p:'Se activa con tu expresión o con una tecla.',
   lbl_how:'Cómo funciona', how_h:'Listo en minutos', how_sub:'ZMaskFX lee la imagen desde el propio OBS, así que nunca pelea por tu cámara. Funciona con NVIDIA Broadcast y cualquier otra fuente.',
   s1h:'Instala y abre OBS', s1p:'Instala ZMaskFX y abre OBS. Se conecta solo.', s2h:'Añade la capa', s2p:'Añade la fuente "ZMaskFX Overlay" a tus escenas; ZMaskFX la mantiene alineada con tu cámara.', s3h:'Elige un preset', s3p:'Escoge un efecto en el panel de ZMaskFX dentro de OBS, pulsa F9 para activarlo y empieza el directo.',
   t1:'Rendimiento', t2:'Seguimiento', t3:'Privacidad',
@@ -219,7 +221,7 @@ const I18N = {
   l3h:'Privado por diseño', l3p:'Tu vídeo nunca sale de tu PC. ZMaskFX solo se conecta para comprobar tu licencia, buscar actualizaciones y descargar packs de efectos. Nunca vendemos tus datos.',
   lbl_games:'Juegos', wow_h:'Dispara efectos desde tu juego', wow_sub:'Lanza un hechizo en World of Warcraft y tu cara reacciona. Gratis: 3 efectos básicos por hechizo o tus propios presets. Pro: todos.',
   lbl_price:'Precio', pr_h:'Precio simple', pr_sub:'Pruébalo gratis. Paga una vez y es tuyo para siempre. Precio de acceso anticipado: puede subir tras el lanzamiento, pero tu licencia seguirá válida de por vida.', once:'pago único',
-  f1:'Efectos que siguen tu cara en tiempo real', f2:'3 presets listos + 3 propios', f3:'Sincronización con hechizos (addon gratuito de World of Warcraft)', f5:'Más juegos próximamente', f4:'Pequeña marca de agua ZMaskFX', cta_free:'Versión gratuita disponible en el lanzamiento',
+  f1:'Efectos que siguen tu cara en tiempo real', f2:'3 presets listos + 3 propios', f3:'Sincronización con hechizos (addon gratuito de World of Warcraft)', f5:'Más juegos próximamente', f4:'Pequeña marca de agua ZMaskFX', cta_free:'Descargar ZMaskFX Free',
   p1:'Todo lo de Free', p2:'Todos los presets y efectos actuales', p3:'Presets propios ilimitados', p4:'Sin marca de agua', p5:'Licencia de por vida, 1 PC a la vez (cambia de PC desde la app)', p6:'Pack 1 de efectos incluido: efectos nuevos y presets listos', cta_buy2:'Comprar ZMaskFX Pro', cta_soon:'Muy pronto',
   tax:'Gumroad gestiona el pago y la factura. Los impuestos (como el IVA) se suman al pagar según tu país.',
   lbl_faq:'Preguntas frecuentes', faq_h:'Preguntas', q1:'¿Funciona con NVIDIA Broadcast y otras cámaras virtuales?', a1:'Sí. ZMaskFX lee la imagen de la fuente de OBS, así que sirve cualquier fuente que OBS pueda mostrar, incluida NVIDIA Broadcast.',
@@ -232,7 +234,7 @@ const I18N = {
   q5:'¿Reembolsos?', a5:'Si ZMaskFX no funciona en tu equipo, escríbenos a <a href="mailto:support@insignialabs.app">support@insignialabs.app</a> en los 30 días posteriores a la compra para pedir el reembolso. Consulta las <a href="terms.html">condiciones</a>.',
   final_h:'Ilumina tu próximo directo.',
   ft_terms:'Términos y reembolsos', ft_priv:'Privacidad',
-  fx_dk:'Exánime', fx_fire:'Fuego infernal', fx_hearts:'Corazones', fx_anime:'Anime estrellas', fx_censor:'CENSORED', fx_zip:'Cremallera',
+  fx_dk:'Exánime', fx_fire:'Fuego infernal', fx_hearts:'Corazones', fx_anime:'Estrellas', fx_censor:'Censura', fx_zip:'Silencio',
   fx_anon:'Anónimo', fx_pixel:'Pixelado',
   legal:'ZMaskFX no está afiliado a Blizzard Entertainment, Inc. ni cuenta con su respaldo. World of Warcraft es una marca de Blizzard Entertainment, Inc. OBS Studio es una marca de sus respectivos propietarios; ZMaskFX es un producto independiente.'
  }
